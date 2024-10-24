@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Nunito", sans-serif;
+        }
+    </style>
+</head>
+<body>
+      <div class="w-[600px] mx-auto my-[45px] border border-[#A7A7A7]">
+        <div id="quiz" class="">
+          <div class="relative px-[14px] py-[7px] bg-[#f0f0f0] flex items-center justify-between">
+            <h4 class="text-[18px] font-bold">Quiz App</h4>
+            <span class="inline-flex h-[35px] space-x-1 px-[7px] items-center rounded-lg text-white bg-[#626262]">
+               <b>Time:</b>
+               <span
+               id="time" 
+               class="size-[25px] inline-flex items-center justify-center bg-[#ffa722] rounded">10</span>
+            </span>
+   
+            <div
+            id="progress" 
+            class="transition-all absolute bottom-0 left-0 bg-[#ffa722] h-[3px]" style="width: 20%"></div>
+          </div>
+   
+          <div class="py-[33px] px-[27px]">
+            <h4 id="title">
+               <b>1.</b>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+           </h4>
+            <div class="mt-[16px] space-y-3" id="answers">
+               <!--
+                  <div class="px-[12px] py-[9px] border rounded-lg cursor-pointer bg-[#d4ffba]">
+                      <b>a.</b>Lorem ipsum dolor sit amet consectetur.
+                  </div>
+                  <div class="px-[12px] py-[9px] border rounded-lg cursor-pointer bg-[#ffdede]">
+                      <b>b.</b>Lorem ipsum dolor sit amet consectetur.
+                  </div>
+               -->
+            </div>
+          </div>
+   
+          <div class="flex items-center justify-between px-[15px] py-[8px] bg-[#f0f0f0]">
+             <span class="inline-flex items-center space-x-1 bg-[#ffa722] rounded-lg text-white px-[9px] h-[35px]">
+               <span id="currentQuestion"></span>
+               <span>/</span>
+               <span id="totalQuestion"></span>
+             </span>
+             <button id="next" class="hidden h-[35px] px-[15px] bg-[#2260ff] rounded-lg text-white">
+               Next question
+             </button>
+          </div>
+   
+        </div>
+
+
+        <div id="finish" class="hidden p-10 flex text-center items-center justify-center">
+          <div>
+            <h4 class="font-bold text-2xl mb-3">Imtahan neticeleri</h4>
+            <p><b>Duzgun cavablarin sayi:</b><span id="correctAnswer">10</span></p>
+            <p><b>Sehv cavablarin sayi:</b><span id="errorAnswer">10</span></p>
+            <p><b>Cavablanmayan suallarin sayi:</b><span id="noneAnswer">10</span></p>
+
+            <button id="refreshQuiz" class="h-[35px] bg-[#ffa722] px-[15px] mt-4 rounded-lg text-white">Yeniden basla</button>
+          </div>
+        </div>
+
+      </div>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
